@@ -1,0 +1,20 @@
+def build_plan_prompt(task_description, instruction_lib_summary, previous_plan=None):
+    base = f"""你是一个智能项目构建规划师。根据下面的任务描述和可用的规则库，请生成一个详细的操作计划。
+
+任务描述：
+{task_description}
+
+可用的规则库（编号和内容摘要）：
+{instruction_lib_summary}
+
+要求：
+1. 计划必须以 JSON 格式返回，包含 "steps" 数组。
+2. 每个步骤必须指定 "action"（可用动作：create_directory, create_file, install_package, run_command, patch_function, run_health_check, send_ai_prompt），以及相应的 "params" 和 "reason"。
+3. 对于需要生成代码的步骤，将 "content_from_ai" 设为 true，并提供 "prompt_hint" 字段，系统会自动拼接规则库中的编码规范生成最终代码。
+4. 步骤应尽量原子化、可验证，并考虑失败重试策略。
+5. 在计划末尾，请列出此计划中建议使用的规则编号列表（如 ["#8","#15","#21"]）。
+6. 只输出 JSON，不要任何额外说明。
+"""
+    if previous_plan:
+        base += f"\n上一个计划执行失败或未完成，请根据以下反馈调整：{previous_plan}"
+    return base

@@ -1,0 +1,32 @@
+{
+  "file": "C:\\Users\\Administrator\\Desktop\\1.py",
+  "errors": [],
+  "results": [
+    {
+      "function": "add",
+      "passed": false,
+      "message": "unsupported operand type(s) for +: 'NoneType' and 'NoneType'"
+    },
+    {
+      "function": "divide",
+      "passed": false,
+      "message": "unsupported operand type(s) for /: 'NoneType' and 'NoneType'"
+    },
+    {
+      "function": "outer",
+      "passed": false,
+      "message": "division by zero"
+    },
+    {
+      "function": "multiply",
+      "passed": false,
+      "message": "类方法无法自动测试（缺少实例）"
+    },
+    {
+      "function": "inner",
+      "passed": false,
+      "message": "name 'inner' is not defined"
+    }
+  ],
+  "overall_success": false
+}

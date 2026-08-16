@@ -1,0 +1,40 @@
+{
+  "file": "C:\\Users\\Administrator\\Desktop\\1.py",
+  "failed_functions": [
+    {
+      "name": "add",
+      "start_line": 1,
+      "end_line": 2,
+      "nest_level": 0,
+      "source": "def add(a, b):\n    return a + b"
+    },
+    {
+      "name": "divide",
+      "start_line": 4,
+      "end_line": 6,
+      "nest_level": 0,
+      "source": "def divide(x, y):\n    # 有除零风险\n    return x / y"
+    },
+    {
+      "name": "outer",
+      "start_line": 12,
+      "end_line": 15,
+      "nest_level": 0,
+      "source": "def outer():\n    def inner():\n        return 1 / 0   # 嵌套函数除零错误\n    return inner()"
+    },
+    {
+      "name": "multiply",
+      "start_line": 9,
+      "end_line": 10,
+      "nest_level": 0,
+      "source": "    def multiply(self, a, b):\n        return a * b"
+    },
+    {
+      "name": "inner",
+      "start_line": 13,
+      "end_line": 14,
+      "nest_level": 1,
+      "source": "    def inner():\n        return 1 / 0   # 嵌套函数除零错误"
+    }
+  ]
+}

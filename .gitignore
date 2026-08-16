@@ -1,0 +1,24 @@
+﻿__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+env/
+.idea/
+.vscode/
+.pytest_cache/
+
+# 敏感配置
+config.json
+
+# 日志和数据库
+*.log
+*.db
+*.sqlite
+
+# 临时文件
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
